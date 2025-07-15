@@ -1,103 +1,61 @@
-import Image from "next/image";
+"use client";
+import React from "react";
+import PenyakitTernakMenu from "@/components/HeroNavigation";
+import { LiquidGlassFilters } from "@gracefullight/liquid-glass";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex flex-col items-start justify-start w-full h-fit">
+      <div className="relative flex w-full h-full">
+        <div className="relative flex h-screen w-full bg-[url(/hero/homepage.svg)] bg-bottom bg-cover bg-no-repeat">
+          <div className="w-full h-full bg-gradient-to-r from-black to-transparent absolute z-[0]"></div>
+          <div className="px-[127px] py-[83px] gap-x-10 flex">
+            <div className="w-1/2 flex flex-col lg:gap-y-10 relative z-10">
+              <h1 className="font-plus-jakarta-sans font-medium lg:text-[70px] text-white">
+                BANK INFORMASI
+                <br />
+                <span className="font-black">TERNAK CERDAS</span>
+              </h1>
+              <p className="font-plus-jakarta-sans font-normal lg:text-[16px] text-white text-justify text-sm/relaxed">
+                Kesehatan hewan ternak seperti sapi, kambing, dan domba memegang
+                peranan penting dalam keberlangsungan usaha peternakan. Penyakit
+                yang menyerang ternak tidak hanya berdampak pada penurunan
+                produksi, tetapi juga dapat menyebabkan kerugian ekonomi yang
+                signifikan, bahkan kematian hewan dalam jumlah besar jika tidak
+                ditangani dengan cepat dan tepat. <br />
+                Selain menimbulkan kerugian secara langsung, beberapa penyakit
+                juga berpotensi menular ke manusia (zoonosis), sehingga menambah
+                risiko terhadap kesehatan masyarakat. Oleh karena itu, pemahaman
+                yang baik mengenai jenis-jenis penyakit ternak, gejalanya, cara
+                penularan, serta langkah pencegahannya menjadi hal yang sangat
+                penting, terutama bagi para peternak, penyuluh, dan masyarakat
+                yang terlibat langsung dengan hewan ternak. <br />
+                Melalui artikel ini, kami menyajikan informasi mengenai berbagai
+                penyakit umum yang menyerang ternak ruminansia, termasuk
+                penyebabnya, gejala klinis, cara penanganan, serta
+                langkah-langkah pencegahan yang dapat dilakukan. Diharapkan
+                informasi ini dapat membantu meningkatkan kesadaran dan
+                kewaspadaan dalam menjaga kesehatan ternak serta mendukung
+                keberlanjutan peternakan yang sehat dan produktif.
+              </p>
+              <h2 className="font-plus-jakarta-sans lg:text-[70px] text-white font-bold leading-none">
+                “Sigap Tanggap Sebelum Terjadi Wabah”
+              </h2>
+            </div>
+            <div className="w-1/2 flex justify-start items-start">
+              <PenyakitTernakMenu />
+              <Link
+                className="relative w-full text-center text-white font-semibold transition-all duration-300 ease-in-out overflow-hidden py-3 px-6 text-lg rounded-full max-w-sm"
+                href="/penggemukan-ternak"
+              >
+                <LiquidGlassFilters />
+                <span className="relative z-10">PENGGEMUKAN TERNAK</span>
+              </Link>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
 }
