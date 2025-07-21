@@ -7,10 +7,6 @@ import {
   LiquidGlassFilters,
 } from "@gracefullight/liquid-glass";
 
-// ============================================================================
-// FILE: components/PenyakitTernakMenu.js
-// ============================================================================
-
 // --- Data dan Konfigurasi Lokal untuk Komponen ---
 const menuData = {
   tidakZoonosis: [
@@ -39,7 +35,7 @@ type MenuItemProps = {
 const MenuItem = ({ children, onClick, className = "" }: MenuItemProps) => (
   <button
     onClick={onClick}
-    className={`relative w-full text-center text-white font-semibold transition-all duration-300 ease-in-out overflow-hidden py-2.5 px-5 text-base ${className}`}
+    className={`relative w-full text-center text-white font-semibold transition-all duration-300 ease-in-out overflow-hidden py-2.5 px-5 text-base backdrop-blur-sm border border-white/30 ${className}`}
   >
     <LiquidGlassFilters />
     <span className="relative z-10">{children}</span>
@@ -100,10 +96,11 @@ const MenuComponent = () => {
   );
 
   return (
-    <div className="flex flex-col items-center w-full max-w-sm mx-auto space-y-2">
+    <div className="flex flex-col items-center w-full mx-auto space-y-2">
       <button
         onClick={togglePenyakitMenu}
-        className="relative w-full text-center text-white font-semibold transition-all duration-300 ease-in-out overflow-hidden py-3 px-6 text-lg rounded-full"
+        className="relative w-full text-center text-white font-semibold transition-all duration-300 ease-in-out overflow-hidden py-3 px-6 text-lg rounded-full hover:bg-green-500/20 focus:bg-green-500/30"
+        data-aos="fade-up"
       >
         <LiquidGlassFilters />
         <span className="relative z-10">PENYAKIT TERNAK</span>
