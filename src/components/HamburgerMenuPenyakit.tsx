@@ -64,7 +64,7 @@ const HamburgerMenu = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="relative z-10 flex items-center justify-center w-fit h-fit px-[15px] py-[18px] rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white transition-colors hover:bg-green-500/20 focus:bg-green-500/30"
         aria-label="Buka menu"
-        data-aos="fade-up"
+        data-aos="fade-left"
       >
         <div className="space-y-1.5">
           <span className="block w-6 h-0.5 bg-white"></span>
@@ -76,14 +76,14 @@ const HamburgerMenu = () => {
       {/* Overlay Gelap */}
       <div
         onClick={() => setIsOpen(false)}
-        className={`fixed inset-0 bg-black/50 z-30 transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-black/50 z-50 transition-opacity duration-300 ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       />
 
       {/* Konten Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-72 bg-black/30 backdrop-blur-xl border-l border-white/20 shadow-2xl z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-72 bg-black/30 backdrop-blur-xl border-l border-white/20 shadow-2xl z-[99999] transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -105,7 +105,7 @@ const HamburgerMenu = () => {
         </div>
 
         {/* Wrapper untuk konten yang bisa di-scroll */}
-        <div className="h-full overflow-y-auto p-6 pt-20 text-white">
+        <div className="h-full overflow-y-auto p-6 pt-20 text-white z-[999999]">
           <h3 className="text-2xl font-semibold text-white/80 mb-2">
             PENYAKIT
           </h3>

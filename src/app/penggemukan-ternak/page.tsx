@@ -7,7 +7,7 @@ const PenggemukanTernak = () => {
   return (
     <div className="flex flex-col justify-center items-center lg:items-start :justify-start w-full h-fit">
       <div className="relative flex w-full h-full">
-        <div className="relative flex h-fit w-full bg-[url(/penggemukan-ternak/bg.png)] bg-bottom bg-cover bg-no-repeat">
+        <div className="relative flex h-screen w-full bg-[url(/penggemukan-ternak/bg.png)] bg-bottom bg-cover bg-no-repeat">
           <div className="w-full h-full bg-gradient-to-b from-black to-transparent absolute z-[0]"></div>
           <div className="lg:px-[127px] lg:py-[83px] p-10 gap-x-10 gap-y-5 lg:gap-y-10 flex flex-col justify-start items-start">
             <div className="flex flex-row lg:gap-y-10 relative z-10 w-full">

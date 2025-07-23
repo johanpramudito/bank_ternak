@@ -38,6 +38,13 @@ export default function RootLayout({
               <span className="font-bold">TERNAK CERDAS</span>
             </p>
             <Image
+              src="/icon/bulukerto.png"
+              alt="Bulukerto Istimewa"
+              width={100}
+              height={80}
+              className="mx-auto bg-white"
+            />
+            <Image
               src="/icon/ugm.png"
               alt="Universitas Gadjah Mada"
               width={80}

@@ -8,9 +8,9 @@ import HamburgerMenu from "@/components/HamburgerMenuPenyakit";
 export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center lg:items-start :justify-start w-full h-fit z-0">
-      <div className="relative flex w-full h-full">
+      <div className="relative flex w-full h-full z-0">
         <div className="relative flex h-fit w-full bg-[url(/hero/homepage.svg)] bg-bottom bg-cover bg-no-repeat">
-          <div className="w-full h-full bg-gradient-to-r from-black to-transparent absolute z-[0]"></div>
+          <div className="w-full h-full bg-gradient-to-r from-black to-transparent absolute z-0"></div>
           <div className="lg:px-[127px] lg:py-[83px] p-10 gap-x-10 gap-y-5 lg:gap-y-0 flex flex-col lg:flex-row justify-start items-start">
             <div className="lg:w-1/2 flex flex-col lg:gap-y-10 gap-y-5 relative z-0">
               <div className="flex flex-row">
@@ -61,12 +61,12 @@ export default function Home() {
             <div className="lg:w-1/2 w-full flex flex-col lg:flex-row lg:justify-start lg:items-start justify-center items-center gap-y-5 lg:gap-x-5 z-0">
               <PenyakitTernakMenu />
               <Link
-                className="relative w-full text-center text-white font-semibold transition-all duration-300 ease-in-out overflow-hidden py-3 px-6 text-lg rounded-full lg:max-w-sm hover:bg-green-500/20 focus:bg-green-500/30 backdrop-blur-sm border border-white/30"
+                className="relative w-full text-center text-white font-semibold transition-all duration-300 ease-in-out overflow-hidden py-3 px-6 text-lg rounded-full lg:max-w-sm hover:bg-green-500/20 focus:bg-green-500/30 backdrop-blur-sm border border-white/30 z-0"
                 href="/penggemukan-ternak"
                 data-aos="fade-up"
               >
                 <LiquidGlassFilters />
-                <span className="relative z-10 ">PENGGEMUKAN TERNAK</span>
+                <span className="relative z-0 ">PENGGEMUKAN TERNAK</span>
               </Link>
               <div className="hidden lg:block">
                 <HamburgerMenu />

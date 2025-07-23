@@ -10,6 +10,8 @@ import DetailBlock from "@/components/DetailBlock";
 import InfoCard from "@/components/InfoCard";
 import ContentBlock from "@/components/ContentBlock";
 import QuoteBox from "@/components/QuoteBox";
+import ImageSlider from "@/components/ImageSlider";
+import Image from "next/image";
 
 // Fungsi ini memberitahu Next.js halaman mana yang harus dibuat secara statis saat build
 export async function generateStaticParams() {
@@ -88,6 +90,13 @@ export default function DiseasePage({ params }) {
               <DetailBlock {...items[1]} />
             </div>
           );
+        case "defisiensi-mineral":
+          return (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <DetailBlock {...items[0]} />
+              <DetailBlock {...items[1]} />
+            </div>
+          );
       }
     }
 
@@ -102,10 +111,117 @@ export default function DiseasePage({ params }) {
     );
   };
 
+  // Fungsi baru untuk merender bagian Gejala Klinis secara dinamis
+  const renderGejalaSection = () => {
+    const items = data.gejala.items;
+
+    switch (data.gejala.customLayout) {
+      case "defisiensi-mineral":
+      case "orf":
+        // Layout ini menampilkan 2 blok konten secara berdampingan
+        return (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {items.map((item, index) => (
+              <div
+                key={index}
+                className="backdrop-blur-md p-6 rounded-xl h-full"
+              >
+                <DetailBlock {...item} />
+              </div>
+            ))}
+          </div>
+        );
+      default:
+        // --- LAYOUT DEFAULT: Teks di Kiri, Gambar di Kanan ---
+        const textItems = items.filter((item) => item.content);
+        const imageItems = items.filter(
+          (item) => item.images && item.images.length > 0
+        );
+
+        return (
+          <div className="z-0 flex flex-col lg:flex-row gap-8 items-start backdrop-blur-md p-6 rounded-xl">
+            {/* Kolom Kiri: Kumpulan semua blok teks */}
+            <div className="w-full lg:w-1/2 space-y-6">
+              {textItems.map((item, index) => (
+                <DetailBlock
+                  key={index}
+                  title={item.title}
+                  content={item.content}
+                  color={item.color}
+                />
+              ))}
+            </div>
+
+            {/* Kolom Kanan: Kumpulan semua gambar/slider */}
+            <div className="w-full lg:w-1/2 space-y-6">
+              {imageItems.map((item, index) => (
+                <div key={index}>
+                  {item.images && item.images.length > 1 ? (
+                    <ImageSlider slides={item.images} />
+                  ) : item.images && item.images.length === 1 ? (
+                    <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg">
+                      <Image
+                        src={item.images[0]}
+                        alt={item.title || "Gambar Gejala"}
+                        fill
+                        style={{ objectFit: "cover" }}
+                      />
+                    </div>
+                  ) : null}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+    }
+
+    // 1. Pisahkan item menjadi grup teks dan grup gambar
+    const textItems = gejalaItems.filter((item) => item.content);
+    const imageItems = gejalaItems.filter(
+      (item) => item.images && item.images.length > 0
+    );
+
+    return (
+      <div className="flex flex-col lg:flex-row gap-8 items-start backdrop-blur-md p-6 rounded-xl">
+        {/* Kolom Kiri: Kumpulan semua blok teks */}
+        <div className="w-full lg:w-1/2 space-y-6">
+          {textItems.map((item, index) => (
+            <DetailBlock
+              key={index}
+              title={item.title}
+              content={item.content}
+              color={item.color}
+            />
+          ))}
+        </div>
+
+        {/* Kolom Kanan: Kumpulan semua gambar/slider */}
+        <div className="w-full lg:w-1/2 space-y-6">
+          {imageItems.map((item, index) => (
+            <div key={index}>
+              {item.images && item.images.length > 1 ? (
+                <ImageSlider slides={item.images} />
+              ) : item.images && item.images.length === 1 ? (
+                <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg">
+                  <Image
+                    src={item.images[0]}
+                    alt={item.title || "Gambar Gejala"}
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+              ) : null}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="bg-gray-50 font-plus-jakarta-sans">
       <HeroSection {...data.hero} />
-      <main className="max-w-7xl mx-auto p-4 md:p-8">
+      <main data-aos="fade-up" className="max-w-7xl mx-auto p-4 md:p-8">
         {data.penyebab && (
           <Section title={data.penyebab.title || "Penyebab"}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -117,7 +233,10 @@ export default function DiseasePage({ params }) {
         )}
 
         {data.penularan && (
-          <Section title={data.penularan.title || "Proses Penularan"}>
+          <Section
+            data-aos="fade-up"
+            title={data.penularan.title || "Proses Penularan"}
+          >
             <div
               className={`grid grid-cols-1 ${
                 data.penularan.items.length > 1 ? "md:grid-cols-2" : ""
@@ -131,7 +250,7 @@ export default function DiseasePage({ params }) {
         )}
 
         {data.gejala && (
-          <Section title={data.gejala.title}>{renderGejalaLayout()}</Section>
+          <Section title={data.gejala.title}>{renderGejalaSection()}</Section>
         )}
 
         {data.quote && <QuoteBox>{data.quote}</QuoteBox>}
@@ -154,17 +273,42 @@ export default function DiseasePage({ params }) {
 
         {data.pengendalian && (
           <Section title={data.pengendalian.title}>
-            <div
-              className={`grid ${
-                data.pengendalian.layout || "grid-cols-1 md:grid-cols-2"
-              } gap-x-12`}
-            >
-              {data.pengendalian.items.map((item, index) => (
-                <ContentBlock key={index} title={item.title}>
-                  {item.content}
-                </ContentBlock>
-              ))}
-            </div>
+            {(() => {
+              // Periksa tipe item pertama untuk menentukan cara render
+              const isSimpleList =
+                typeof data.pengendalian.items[0] === "string";
+
+              if (isSimpleList) {
+                // Jika item adalah string, render sebagai daftar bubble/dot
+                return (
+                  <div className="space-y-4">
+                    {data.pengendalian.items.map((item, index) => (
+                      <div key={index} className="flex items-start gap-4">
+                        <span className="mt-2 flex-shrink-0 w-3 h-3 rounded-full bg-gray-700 dark:bg-gray-300"></span>
+                        <p className="text-lg leading-relaxed text-gray-800 dark:text-gray-200">
+                          {item}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                );
+              } else {
+                // Jika item adalah objek, render sebagai grid ContentBlock
+                return (
+                  <div
+                    className={`grid ${
+                      data.pengendalian.layout || "grid-cols-1 md:grid-cols-2"
+                    } gap-x-12`}
+                  >
+                    {data.pengendalian.items.map((item, index) => (
+                      <ContentBlock key={index} title={item.title}>
+                        {item.content}
+                      </ContentBlock>
+                    ))}
+                  </div>
+                );
+              }
+            })()}
           </Section>
         )}
       </main>

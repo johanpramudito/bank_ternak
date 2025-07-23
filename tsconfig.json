@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/penyakit/[diseaseId]/page.jsx", "src/app/penyakit/[diseaseId]/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/penyakit/[diseaseId]/page.tsx", "src/app/penyakit/[diseaseId]/page.tsx"],
   "exclude": ["node_modules"]
 }

@@ -25,7 +25,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     <div className="items-center justify-end flex mb-20">
       <HamburgerMenu />
     </div>
-    <div className="relative z-10 max-w-4xl flex-wrap">
+    <div className="relative z-10 max-w-4xl flex-wrap" data-aos="fade-right">
       <h1 className="text-4xl md:text-6xl font-extrabold font-unbounded">
         {title}
       </h1>

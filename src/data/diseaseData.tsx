@@ -35,8 +35,7 @@ export const diseaseData = {
             "Pembengkakan pada kelenjar pertahanan.",
             "Penurunan produksi susu.",
           ],
-          imageSrc:
-            "https://placehold.co/600x400/556B2F/FFFFFF?text=Gejala+LSD",
+          images: ["/lsd/LSD1.png", "/lsd/LSD2.png"],
         },
       ],
     },
@@ -151,8 +150,7 @@ export const diseaseData = {
             "Malas bergerak.",
             "Nafsu makan menurun",
           ],
-          imageSrc:
-            "https://placehold.co/600x400/B22222/FFFFFF?text=Gejala+PMK",
+          images: ["/pmk/PMK1.png", "/pmk/PMK2.png", "/pmk/PMK3.png"],
         },
       ],
     },
@@ -262,8 +260,12 @@ export const diseaseData = {
             "Pada manusia, terjadi demam tidak teratur (naik turun), berkeringat saat malam hari, nyeri otot dan sendi, sakit kepala, lelah, anoreksia (tidak nafsu makan). Bisa terjadi komplikasi: pembengkakan testis, radang sendi, endokarditis (radang pada jantung), gangguan saraf, dan kelelahan kronis",
         },
         {
-          imageSrc:
-            "https://placehold.co/600x400/A0522D/FFFFFF?text=Gejala+Brucellosis",
+          images: [
+            "/brucellosis/BRU1.png",
+            "/brucellosis/BRU2.png",
+            "/brucellosis/BRU3.png",
+            "/brucellosis/BRU4.png",
+          ],
         },
       ],
     },
@@ -365,16 +367,14 @@ export const diseaseData = {
           title: "Pada Hewan",
           content:
             "Hewan yang terinfeksi virus mengalami peradangan atau keropeng pada kulit sekitar mulut, kelopak mata, alat genital, ambing pada hewan yang sedang menyusui dan kaki bagian dalam atau pada  tempat yang jarang ditumbuhi bulu.",
-          imageSrc:
-            "https://placehold.co/600x400/8B4513/FFFFFF?text=Gejala+Orf+Hewan",
+          images: ["/orf/ORF1.png", "/orf/ORF2.png"],
         },
         {
           title: "Pada Manusia",
           content: [
             "Orang yang terinfeksi virus orf biasanya mengalami luka atau nodul di tangan atau lengan bawah. Ruam ini bersifat infeksius, artinya dapat menyebar ke area tubuh seseorang jika mereka menggaruk atau menyentuh luka tersebut. Luka berkembang secara bertahap selama enam minggu. Mereka mungkin juga mengalami demam ringan, kelelahan, atau pembengkakan kelenjar di leher dan ketiak (kelenjar getah bening).",
           ],
-          imageSrc:
-            "https://placehold.co/600x400/CD853F/FFFFFF?text=Orf+pada+Manusia",
+          images: ["/orf/ORF3.png", "/orf/ORF4.png", "/orf/ORF5.png"],
         },
       ],
     },
@@ -591,7 +591,7 @@ export const diseaseData = {
           ],
         },
         {
-          imageSrc: "https://placehold.co/600x400/4682B4/FFFFFF?text=Gejala+TB",
+          images: ["/tuberculosis/TBC1.png", "/tuberculosis/TBC2.png"],
         },
       ],
     },
@@ -702,7 +702,7 @@ export const diseaseData = {
         },
         {
           title: "Domba",
-          color: "dark",
+          color: "red",
           content: [
             "Nyeri pada bagian perut (akut apabila cacing sudah bermigrasi ke hati)",
             "Anemia",
@@ -710,8 +710,7 @@ export const diseaseData = {
           ],
         },
         {
-          imageSrc:
-            "https://placehold.co/600x400/2E8B57/FFFFFF?text=Gejala+Fasciolosis",
+          images: ["/fasciolosis/FAS1.png"],
         },
       ],
     },
@@ -792,8 +791,7 @@ export const diseaseData = {
             "Hewan sering menendang perut dan berguling untuk mengurangi rasa sakit",
             "Penurunan atau hilangnya nafsu makan",
           ],
-          imageSrc:
-            "https://placehold.co/600x400/708090/FFFFFF?text=Gejala+Bloat",
+          images: ["/bloat/Bloat.png"],
         },
       ],
     },
@@ -803,7 +801,7 @@ export const diseaseData = {
         {
           content:
             "Bloat dapat muncul secara mendadak dan harus segera ditangani karena dapat berakibat fatal.",
-          color: "white",
+          color: "green",
         },
       ],
     },
@@ -891,6 +889,7 @@ export const diseaseData = {
     },
     gejala: {
       title: "Gejala Klinis",
+      customLayout: "defisiensi-mineral",
       items: [
         {
           title: "Umum",
@@ -918,14 +917,28 @@ export const diseaseData = {
       title: "Pengendalian & Pencegahan",
       items: [
         {
-          content: [
+          title:
             "Berikan pakan yang mengandung semua mineral esensial, baik makro maupun mikro",
+        },
+        {
+          title:
             "Perhatikan kualitas pakan hijauan dan tambahkan konsentrat yang kaya mineral",
+        },
+        {
+          title:
             "Gunakan pakan tambahan seperti mineral blok untuk melengkapi kebutuhan mineral ternak",
+        },
+        {
+          title:
             "Untuk kekurangan mineral dalam pakan, berikan suplemen mineral melalui pakan atau air minum",
+        },
+        {
+          title:
             "Perhatikan gejala defisiensi mineral pada ternak, seperti penurunan nafsu makan, pertumbuhan terhambat, bulu kusam, atau gangguan reproduksi",
-            "Sesuaikan jenis dan jumlah pakan dengan kebutuhan ternak berdasarkan umur, jenis kelamin, dan fase reproduksi",
-          ],
+        },
+        {
+          title:
+            "Sesuaikan jenis dan jumlah pakan dengan kebutuhan ternak berdasarkan umur,jenis kelamin, dan fase reproduksi",
         },
       ],
     },
