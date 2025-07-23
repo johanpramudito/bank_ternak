@@ -93,6 +93,10 @@ export const diseaseData = {
         },
       ],
     },
+    bibliography: [
+      "Sendow, I., Assadah, N., Ratnawati, A., Dharmayanti, N., & Sepulloh, M. (2021). Lumpy Skin Disease: Ancaman Penyakit Emerging bagi Status Kesehatan Hewan Nasional dalam.",
+      "Sirat, M. M. P., Ermawati, R., Parera, H., Dhani, A. R., Ramadanti, A. H., Sani, D., & Hizkia, E. PENYAKIT KULIT BERBENJOL PADA TERNAK SAPI.",
+    ],
   },
   pmk: {
     id: "pmk",
@@ -196,6 +200,10 @@ export const diseaseData = {
         },
       ],
     },
+    bibliography: [
+      "Bulu, P. M. (2023). Epidemiologi, Penanggulangan Dan Pemberantasan Penyakit Mulut Dan Kuku (Pembelajaran dari Wabah PMK Indonesia 1887-1997). Partner.",
+      "Rohma, M. R., Zamzami, A., Utami, H. P., Karsyam, H. A., & Widianingrum, D. C. (2022, November). Kasus penyakit mulut dan kuku di Indonesia: epidemiologi, diagnosis penyakit, angka kejadian, dampak penyakit, dan pengendalian. In Conference of Applied Animal Science Proceeding Series (Vol. 3, pp. 15-22).",
+    ],
   },
   brucellosis: {
     id: "brucellosis",
@@ -329,6 +337,12 @@ export const diseaseData = {
         },
       ],
     },
+    bibliography: [
+      "Corbel, M. J. (2006). Brucellosis in humans and animals. World Health Organization.",
+      "Dr. Thind’s Homeopathy. (n.d.). Brucellosis (Rock fever, Cyprus fever). https://drthindhomeopathy.com/disease/brucellosis-rock-fever-cyprus-fever/",
+      "KaryaDrh. (2015, Juli 20). Penyakit Brucellosis pada sapi dan dampaknya terhadap kesehatan manusia. KaryaDrh Blogspot. https://karyadrh.blogspot.com/2015/07/penyakit-brucellosis-pada-sapi-dan.html",
+      "Khasrad dan Rusdimansyah. (2022). Manajemen Pemeliharaan Sapi Pedaging. Padang: Andalas University Press.",
+    ],
   },
   orf: {
     id: "orf",
@@ -435,6 +449,12 @@ export const diseaseData = {
         },
       ],
     },
+    bibliography: [
+      "Centers for Disease Control and Prevention. (2022, September 26). About Orf virus. U.S. Department of Health & Human Services. https://www.cdc.gov/orf-virus/about/index.html",
+      "Dinas Pertanian Kabupaten Sleman. (2023, Juli 12). Apa itu penyakit Orf (Bengoran/Dakangan)? https://pertanian.slemankab.go.id/apa-itu-penyakit-orf-bengoran-dakangan/",
+      "Simarmata, Y. T., Kale, N. D., & Sanam, M. U. (2021). Laporan Kasus Penyakit ORF (Ecthyma contagiosa) Pada Kambing. Jurnal Veteriner Nusantara, 4(Supl. 2).",
+      "Wardhani, L. D. K., Jatmiko, B. S., & Khofifaturrahmah, R. (2022). Studi Kasus Orf Pada Kambing di Desa Megasari Kabupaten Kotabaru Kalimantan Selatan. Jurnal Ilmiah Fillia Cendekia Vol, 7(1), 7-11.",
+    ],
   },
   antraks: {
     id: "antraks",
@@ -544,6 +564,12 @@ export const diseaseData = {
         },
       ],
     },
+    bibliography: [
+      "https://www-cdc-gov.translate.goog/orf-virus/about/index.html?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=imgs",
+      "https://pertanian.slemankab.go.id/apa-itu-penyakit-orf-bengoran-dakangan/",
+      "Simarmata, Y. T., Kale, N. D., & Sanam, M. U. (2021). Laporan Kasus Penyakit ORF (Ecthyma contagiosa) Pada Kambing. Jurnal Veteriner Nusantara, 4(Supl. 2).",
+      "Wardhani, L. D. K., Jatmiko, B. S., & Khofifaturrahmah, R. (2022). Studi Kasus Orf Pada Kambing di Desa Megasari Kabupaten Kotabaru Kalimantan Selatan. Jurnal Ilmiah Fillia Cendekia Vol, 7(1), 7-11.",
+    ],
   },
   tuberculosis: {
     id: "tuberculosis",
@@ -653,6 +679,11 @@ export const diseaseData = {
         },
       ],
     },
+    bibliography: [
+      "Carrisoza-Urbina, J., Morales-Salinas, E., Bedolla-Alva, M. A., Hernández-Pando, R., & Gutiérrez-Pabello, J. A. (2019). Atypical granuloma formation in Mycobacterium bovis-infected calves. PloS One, 14(7), e0218547.",
+      "Irish Cattle Breeding Federation. (n.d.). All about TB. https://www.icbf.com/all-about-tb/",
+      "Shitaye, J. E., Tsegaye, W., & Pavlik, I. (2007). Bovine tuberculosis infection in animal and human populations in Ethiopia: a review. Veterinarni Medicina, 52(8), 317.",
+    ],
   },
   fasciolosis: {
     id: "fasciolosis",
@@ -752,6 +783,10 @@ export const diseaseData = {
         },
       ],
     },
+    bibliography: [
+      "Elliott, T., Kelley, J., Rawlin, G., & Spithill, T. (2015). High prevalence of fasciolosis and evaluation of drug efficacy against Fasciola hepatica in dairy cattle in the Maffra and Bairnsdale districts of Gippsland, Victoria, Australia. Veterinary Parasitology, 209(1–2), 117–124.",
+      "Taylor, M. A., Coop, R. L., & Wall, R. L. (2016). Veterinary parasitology (4th ed.). Wiley-Blackwell.",
+    ],
   },
   bloat: {
     id: "bloat",
@@ -832,6 +867,11 @@ export const diseaseData = {
         },
       ],
     },
+    bibliography: [
+      "Akbar, F. (2019). Metabolisme Disorder. The Wonderful Ecosystem of Ruminant’s Rumen, 58.",
+      "Khasrad dan Rusdimansyah. (2022). Manajemen Pemeliharaan Sapi Pedaging. Padang: Andalas University Press.",
+      "Putra, N. G. W., Ramadani, D. N., Ardiansyah, A., Syaifudin, F., Yulinar, R. I., & Khasanah, H. (2022). Strategi pencegahan dan penanganan gangguan metabolis pada ternak ruminansia. Jurnal Peternakan Indonesia (Indonesian Journal of Animal Science), 24(2), 150-159.",
+    ],
   },
   "defisiensi-mineral": {
     id: "defisiensi-mineral",
@@ -942,5 +982,11 @@ export const diseaseData = {
         },
       ],
     },
+    bibliography: [
+      "Zaeini, Iqin. (2019, 13 Desember). Penyakit Defisiensi Mineral pada Ternak Ruminansia dan Upaya Pencegahannya. Dinas Peternakan dan Kesehatan Hewan. https://disnakeswan.lebakkab.go.id/penyakit-defisiensi-mineral-pada-ternak-ruminansia-dan-upaya-pencegahannya/",
+      "Wahyuni, Ike (2021, 24 Agustus). Defisiensi Mineral pada Ternak Sapi Ruminansia. https://cybex.id/artikel/98671/defisiensi-mineral-pada-ternak-sapi-ruminansia/",
+      "Grehenson Gusti. (2024, 7 Oktober). Kenali Gejala Ternak Kurang Mineral. Tim UGM Kenalkan Cara Bikin Mineral Blok Sederhana. https://ugm.ac.id/id/berita/kenali-gejala-ternak-kurang-mineral-tim-ugm-kenalkan-cara-bikin-mineral-blok-sederhana/",
+      "Peternakans1. (2024, 16 Agustus). Atasi Kekurangan Mineral pada Ternak, Rizqi Ibnu Awwalin (Mahasiswa S1 Peternakan Undip) Melakukan Pelatihan Pembuatan Mineral Blok sebagai Permen Jilat Kaya Mineral untuk Ternak Saat KKN di Klaten. https://peternakan.fpp.undip.ac.id/2024/08/atasi-kekurangan-mineral-pada-ternak-rizqi-ibnu-awwalin-mahasiswa-s1-peternakan-undip-melakukan-pelatihan-pembuatan-mineral-blok-sebagai-permen-jilat-kaya-mineral-untuk-ternak-saat-kkn-di-klaten/",
+    ],
   },
 };

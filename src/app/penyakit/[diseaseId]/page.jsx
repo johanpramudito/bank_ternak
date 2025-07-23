@@ -311,6 +311,23 @@ export default function DiseasePage({ params }) {
             })()}
           </Section>
         )}
+
+        {data.bibliography && data.bibliography.length > 0 && (
+          <Section title="Referensi">
+            <ol type="1" className="list-inside space-y-2">
+              {data.bibliography.map((ref, index) => (
+                <li
+                  key={index}
+                  className="text-black text-[16px] font-plus-jakarta-sans"
+                >
+                  <h3 className="text-black text-[16px] font-plus-jakarta-sans">
+                    {ref}
+                  </h3>
+                </li>
+              ))}
+            </ol>
+          </Section>
+        )}
       </main>
     </div>
   );
